@@ -6,6 +6,7 @@
 
 #ifndef tscSelectorSwitch_h
 #define tscSelectorSwitch_h
+#endif 
 
 #include "Arduino.h"
 
@@ -13,14 +14,15 @@ class TscSelectorSwitch
 {
     public:
         TscSelectorSwitch(int pinOne, int pinTwo);
-        void setPositionValues(int[] positionValues);
+        void setPositionValues(int* positionValues);
         void setDefaultValue(int defaultValue);
         int getCurrentValue();
         int getCurrentPosition();
+        void initialize();
 
     private:
-        int positionValues[3] = {1, 2, 3};
+        int* positionValues;
         int defaultValue = 0;
         int pinOne;
         int pinTwo;
-}
+};

@@ -4,7 +4,7 @@
 */
 
 #include "Arduino.h"
-#include "CzMotor.h"
+#include "TscSelectorSwitch.h"
 
 TscSelectorSwitch::TscSelectorSwitch(int pinOne, int pinTwo)
 {
@@ -18,7 +18,7 @@ void TscSelectorSwitch::initialize()
     pinMode(this->pinTwo, INPUT);
 }
 
-void TscSelectorSwitch::setPositionValues(int[] positionValues)
+void TscSelectorSwitch::setPositionValues(int* positionValues)
 {
     this->positionValues = positionValues;
 }
